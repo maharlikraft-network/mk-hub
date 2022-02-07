@@ -1,8 +1,8 @@
-name: InstaHub
-main: DPGD896\Hub\Main
+name: MaharliKraft Hub
+main: DPGD896\MKHub\Main
 author: DENPlayz414502
-api: [3.0.0, 3.22.5]
+api: 3.0.0
 version: 1.0
 commands:
      hub:
-      description: "MaharliKraft's Main Lobby"
+      description: "§l§1Maharli§4Kraft §eMain Lobby"
