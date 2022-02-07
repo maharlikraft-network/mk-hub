@@ -1,6 +1,6 @@
 <?php
 
-namespace DPGD896\Hub;
+namespace DPGD896\MKHub;
 
 use pocketmine\Server;
 use pocketmine\Player;
@@ -24,8 +24,8 @@ class main extends PluginBase implements Listener {
                  case "hub":
 	               if($sender instanceof Player){
 		               $sender->teleport($this->getServer()->getDefaultLevel()->getSpawnLocation());
-		               $sender->addtitle("Teleported", "to Lobby!",);
-		               $sender->sendMessage("§l§6HUB §l§7» §r§7Teleported!");
+		               $sender->addtitle("§l§aTeleported", "§l§7to Lobby!",);
+		               $sender->sendMessage("§l§eHub §l§7» §r§7Teleported!");
                   }
 	     }
 	return true;
