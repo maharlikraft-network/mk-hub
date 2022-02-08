@@ -1,2 +1,4 @@
-# HubCommand
-An official dedicated plugin for MaharliKraft Network. Coded by DPG
+# Hub Command
+An official hub plugin of MaharliKraft Network. Coded by DPG
+
+**This plugin is opensource**
