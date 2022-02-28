@@ -24,7 +24,7 @@ class main extends PluginBase implements Listener {
     
           switch($cmd->getName()){
                  case "hub":
-                   if ($sender->hasPermission("insta.hub")){
+                   if ($sender->hasPermission("maharlikraft.hub")){
                                    $world = $this->getServer()->getWorldManager()->getWorldByName("newhub");
                        $sender->teleport($world->getSafeSpawn());
                        $sender->sendtitle("Teleported", "to Lobby!",);
