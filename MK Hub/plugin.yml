@@ -1,8 +1,16 @@
-name: MaharliKraft Hub
-main: DPGD896\MKHub\Main
+name: MaharliKraft-Hub
+version: 2.0
+main: DPGD896/Hub/Main
+api: 4.0.0
 author: DENPlayz414502
-api: 3.0.0
-version: 1.0
+
 commands:
-     hub:
-      description: "§l§1Maharli§4Kraft §eMain Lobby"
+  hub:
+    usage: /hub
+    description: §l§1Maharli§4Kraft §eMain Lobby!
+    permission: maharlikraft.hub
+    
+permissions:
+  maharlikraft.hub:
+    description: MaharliKraft Hub
+    default: true
