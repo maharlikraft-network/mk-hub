@@ -1,6 +1,6 @@
 <?php
 
-namespace DPGD896\MKHub;
+namespace DPGD896\Hub;
 
 use pocketmine\Server;
 use pocketmine\Player;
@@ -10,26 +10,28 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 
+use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\Listener;
 
 class main extends PluginBase implements Listener {
-	
-	public function onEnable(){
-	
-	}
-	
-	public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args) : bool {
-	
-	      switch($cmd->getName()){
+    
+    public function onEnable() : void{
+        
+    }
+    
+    
+    public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
+    
+          switch($cmd->getName()){
                  case "hub":
-	               if($sender instanceof Player){
-		               $sender->teleport($this->getServer()->getDefaultLevel()->getSpawnLocation());
-		               $sender->addtitle("§l§aTeleported", "§l§7to Lobby!",);
-		               $sender->sendMessage("§l§eHub §l§7» §r§7Teleported!");
+                   if ($sender->hasPermission("insta.hub")){
+                                   $world = $this->getServer()->getWorldManager()->getWorldByName("newhub");
+                       $sender->teleport($world->getSafeSpawn());
+                       $sender->sendtitle("Teleported", "to Lobby!",);
+                       $sender->sendMessage("Teleported!");
                   }
-	     }
-	return true;
-	}
-	
-	
+         }
+      return true;
+    }
+    
 }
