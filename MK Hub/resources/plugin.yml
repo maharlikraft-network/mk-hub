@@ -1,0 +1,19 @@
+---
+#   __  __ _  ___   ___        __
+#  |  \/  | |/ / \ | \ \      / /
+#  | |\/| | ' /|  \| |\ \ /\ / / 
+#  | |  | | . \| |\  | \ V  V /  
+#  |_|  |_|_|\_\_| \_|  \_/\_/   
+                                
+# Config file of MKHub
+
+# If you're having problems with this plugin, Contact dpg#2396
+
+# Lobby
+world: "newhub"
+
+# Messages when a player triggered a command:
+title: "Teleported"
+subtitle: "To Lobby!"
+message-to-player: "You have been teleported!"
+---
