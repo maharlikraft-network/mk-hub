@@ -16,7 +16,9 @@ use pocketmine\event\Listener;
 class main extends PluginBase implements Listener {
     
     public function onEnable() : void{
-        
+        @mkdir($this->getDataFolder());
+        $this->saveDefaultConfig();
+        $this->getResource("config.yml"); 
     }
     
     
@@ -24,14 +26,14 @@ class main extends PluginBase implements Listener {
     
           switch($cmd->getName()){
                  case "hub":
-                   if ($sender->hasPermission("maharlikraft.hub")){
-                                   $world = $this->getServer()->getWorldManager()->getWorldByName("newhub");
+                   if ($sender->hasPermission("insta.hub")){
+                                   $world = $this->getServer()->getWorldManager()->getWorldByName($this->getConfig()->get("world"));
                        $sender->teleport($world->getSafeSpawn());
-                       $sender->sendtitle("Teleported", "to Lobby!",);
-                       $sender->sendMessage("Teleported!");
+                       $sender->sendtitle($this->getConfig()->get("title"), $this->getConfig()->get("subtitle"),);
+                       $sender->sendMessage($this->getConfig()->get("message-to-player"));
                   }
          }
       return true;
     }
-    
+
 }
